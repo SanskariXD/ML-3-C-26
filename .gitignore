@@ -1,0 +1,55 @@
+# Caches and build artifacts — never commit these.
+# The dataset (~2.3 GB) and work dirs (multi-GB memmaps) are far too large for git.
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+
+# Pipeline work dirs (any name). Regenerate with run.py.
+work/
+work_*/
+**/work/
+**/work_*/
+**/work_dev/
+**/work_full/
+**/work_exp_*/
+
+# Large binary caches if they ever land outside a work dir
+*.npy
+*.npz
+*.parquet
+*.pkl
+*.pickle
+*.memmap
+
+# Logs
+*.log
+**/run_*.log
+
+# Large data: provided dataset and generated submissions
+student_resource/dataset/
+output/*.tsv
+output/**/*.tsv
+baseline/**/*.tsv
+*.zip
+!student_resource/*.zip
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Keep the docs and code. Explicitly re-include small things that matter.
+!student_resource/README.md
+!student_resource/Documentation_template.md
+!student_resource/utils/

@@ -1,0 +1,9 @@
+# Optional GPU pass (--dense). Install torch FIRST from the CUDA 12.8 index
+# (required for RTX 50-series / Blackwell sm_120):
+#   pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cu128
+# then:
+sentence-transformers==3.3.1     # Apache-2.0
+transformers==4.46.3             # Apache-2.0
+faiss-cpu==1.9.0.post1           # MIT — IndexFlatIP (CPU). On A100 prefer conda/pip faiss-gpu
+                                 # if available; dense.py auto-uses GPU when faiss.get_num_gpus()>0
+# model: intfloat/multilingual-e5-small (MIT, 118M params) - downloaded once from HF hub

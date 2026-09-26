@@ -1,0 +1,12 @@
+# Python 3.11 (x64). All wheels below exist for win_amd64 / manylinux / macOS.
+numpy==1.26.4
+pandas==2.2.3
+pyarrow==17.0.0
+scipy==1.13.1
+scikit-learn==1.5.2
+joblib==1.4.2
+lightgbm==4.5.0          # MIT
+rapidfuzz==3.10.1        # MIT  (process.cpdist needs >= 3.6)
+anyascii==0.3.2          # ISC
+psutil==6.1.0
+jellyfish==1.2.1             # BSD-2-Clause; phonetic name codes (NYSIIS)
